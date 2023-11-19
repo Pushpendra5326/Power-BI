@@ -14,10 +14,15 @@ Today’s challenge I’ll display a few key metrics from the inbuilt sample dat
 3. Create Visuals:
 
       a. New Card
+
       b. Text Boxes
+
       c. Slicers
+
       d. Logo Image
+   
       e. Filter
+   
       f. Clustered Column Chart
 5. Publish to Power BI Service
 
