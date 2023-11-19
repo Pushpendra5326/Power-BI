@@ -15,5 +15,8 @@ Today’s challenge I’ll display a few key metrics from the inbuilt sample dat
    f. Clustered Column Chart
 5. Publish to Power BI Service
 
+**Fetch Data in power BI as excel format**
+To get raw data in power BI, Goto Home >> Click on >> Excel WorkBook >> Browse file from location >> Click on file check box at Navigator window >> Click on load.
+![Screenshot 2023-11-20 081554](https://github.com/Pushpendra5326/Power-BI/assets/145826060/01789ca9-9889-4793-8fd0-5e8844e45c08)
 
 
