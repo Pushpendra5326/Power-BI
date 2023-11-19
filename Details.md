@@ -1,6 +1,7 @@
 **Challenge OverView**
 
 Today’s challenge I’ll display a few key metrics from the inbuilt sample dataset using the new card visual. I’ll present a few options, but feel free to play around with the design and selected metrics.
+. . .
 
 **Steps**
 1. Fetch Data in power BI as excel format
@@ -14,6 +15,7 @@ Today’s challenge I’ll display a few key metrics from the inbuilt sample dat
    e. Filter
    f. Clustered Column Chart
 5. Publish to Power BI Service
+. . .
 
 **Fetch Data in power BI as excel format**
 
