@@ -25,4 +25,11 @@ To get raw data in power BI, Goto Home >> Click on >> Excel WorkBook >> Browse f
 
 ![Screenshot 2023-11-20 081554](https://github.com/Pushpendra5326/Power-BI/assets/145826060/01789ca9-9889-4793-8fd0-5e8844e45c08)
 
+Now, Read the sample data carefully which contain 16 Columns and 700 Rows with different types of Data Types.
+
+![Data types](https://github.com/Pushpendra5326/Power-BI/assets/145826060/023d5f6f-0e01-4317-9cc3-2044c7a96af2)
+
+. . .
+
+
 
