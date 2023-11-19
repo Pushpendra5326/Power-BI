@@ -13,7 +13,7 @@ Today’s challenge I’ll display a few key metrics from the inbuilt sample dat
    d. Logo Image
    e. Filter
    f. Clustered Column Chart
-4. Publish to Power BI Service
+5. Publish to Power BI Service
 
 
 
