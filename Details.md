@@ -1,6 +1,8 @@
 **Workout Wednesday || Power BI Challenge 2023 Week 26**
 
 
+
+
 **Challenge OverView**
 
 Today’s challenge I’ll display a few key metrics from the inbuilt sample dataset using the new card visual. I’ll present a few options, but feel free to play around with the design and selected metrics.
