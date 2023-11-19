@@ -1,3 +1,6 @@
+**Workout Wednesday || Power BI Challenge 2023 Week 26**
+
+
 **Challenge OverView**
 
 Today’s challenge I’ll display a few key metrics from the inbuilt sample dataset using the new card visual. I’ll present a few options, but feel free to play around with the design and selected metrics.
@@ -21,7 +24,7 @@ Today’s challenge I’ll display a few key metrics from the inbuilt sample dat
 
 **Fetch Data in power BI as excel format**
 
-To get raw data in power BI, Goto Home >> Click on >> Excel WorkBook >> Browse file from location >> Click on file check box at Navigator window >> Click on load.
+To get raw data in power BI, Goto Home >> Click on >> Excel WorkBook >> Browse file from location [financials] >> Click on file check box at Navigator window >> Click on load.
 
 ![Screenshot 2023-11-20 081554](https://github.com/Pushpendra5326/Power-BI/assets/145826060/01789ca9-9889-4793-8fd0-5e8844e45c08)
 
@@ -31,5 +34,8 @@ Now, Read the sample data carefully which contain 16 Columns and 700 Rows with d
 
 . . .
 
+**Create required measures**
+
+I have used total 6 measures using DAX query.
 
 
