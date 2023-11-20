@@ -84,7 +84,6 @@ I have created total 6 measures using DAX query.
                         Profit Margin = DIVIDE(sum([Profit]), SUM(financials[ Sales]),0)
 
 
-
 **SVG sparklines**
 To used SVG Image Sparkline in the card, Search on Google "https://kerrykolosko.com/" and click on templets, choose SVG templets.
 
