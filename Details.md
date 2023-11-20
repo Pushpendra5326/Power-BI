@@ -13,17 +13,17 @@ Today’s challenge I’ll display a few key metrics from the inbuilt sample dat
 3. SVG sparklines
 3. Create Visuals:
 
-      a. New Card
+            a. New Card
 
-      b. Text Boxes
+            b. Text Boxes
 
-      c. Slicers
+            c. Slicers
 
-      d. Logo Image
+            d. Logo Image
    
-      e. Filter
+            e. Filter
    
-      f. Clustered Column Chart
+            f. Clustered Column Chart
 5. Publish to Power BI Service
 
 . . .
@@ -42,6 +42,10 @@ Now, Read the sample data carefully which contain 16 Columns and 700 Rows with d
 
 **Create required measures**
 
-I have used total 6 measures using DAX query.
+To create measure: Right click on any of column name at power bi desktop and select **New Measure** Then write a query & New measure will be created.
+
+![image](https://github.com/Pushpendra5326/Power-BI/assets/145826060/0294b54b-4fe2-4aac-95c7-bd8e7e3e797d)
+ 
+I have created total 6 measures using DAX query.
 
 
