@@ -52,6 +52,7 @@ I have created total 6 measures using DAX query.
 
                         Profits = SUM(financials[Profit])
 
+
 **2. Profit last Month**
 
                         Profit last month = 
@@ -63,17 +64,88 @@ I have created total 6 measures using DAX query.
                                                                                 MONTH)
                                                             )
 
+
 **3. SalesRevenue**
 
                         SalesRevenue = SUM(financials[ Sales])
+
 
 **4. Profit MoM Var**
 
                         Profit MoM Var = [Profits]-[Profit last month]
 
+
 **5. Profit Mom % Var**
 
                         Profit MoM % Var = DIVIDE([Profit MoM Var], [Profit last month], 0)
+
+
+**Profit Margin**
+                        Profit Margin = DIVIDE(sum([Profit]), SUM(financials[ Sales]),0)
+
+
+
+**SVG sparklines**
+To used SVG Image Sparkline in the card, Search on Google "https://kerrykolosko.com/" and click on templets, choose SVG templets.
+
+
+
+Now goto open "Gradient Area Sparkline with last point" and copy "To use in a singular visual" Code, and create the measure as per requirements as below:
+
+            Sales Sparkline / Profit Sparkline / Profit Margin Sparkline = 
+                        // Static line color - use %23 instead of # for Firefox compatibility (Measure Derived from Eldersveld Modified by Kolosko)
+                        VAR LineColour = "%23118DFF"
+                        VAR PointColour = "white"
+                        VAR Defs = "<defs>
+                            <linearGradient id='grad' x1='0' y1='25' x2='0' y2='50' gradientUnits='userSpaceOnUse'>
+                                <stop stop-color='#118DFF' offset='0' />
+                                <stop stop-color='#118DFF' offset='0.3' />
+                                <stop stop-color='white' offset='1' />
+                            </linearGradient>
+                        </defs>"
+                        // "Date" field used in this example along the X axis
+                        VAR XMinDate = MIN(financials[Date])
+                        VAR XMaxDate = MAX(financials[Date])
+                        
+                        // Obtain overall min and overall max measure values when evaluated for each date
+                        VAR YMinValue = MINX(Values(financials[Date]),CALCULATE([SUM Gross Sales]))
+                        VAR YMaxValue = MAXX(Values(financials[Date]),CALCULATE([SUM Gross Sales]))
+                        
+                        // Build table of X & Y coordinates and fit to 50 x 150 viewbox
+                        VAR SparklineTable = ADDCOLUMNS(
+                            SUMMARIZE('financials',financials[Date]),
+                                "X",INT(150 * DIVIDE(financials[Date] - XMinDate, XMaxDate - XMinDate)),
+                                "Y",INT(50 * DIVIDE([SUM Gross Sales] - YMinValue,YMaxValue - YMinValue)))
+                        
+                        // Concatenate X & Y coordinates to build the sparkline
+                        VAR Lines = CONCATENATEX(SparklineTable,[X] & "," & 50-[Y]," ", financials[Date])
+                        
+                        // Last data points on the line
+                        VAR LastSparkYValue = MAXX( FILTER(SparklineTable, financials[Date] = XMaxDate), [Y])
+                        VAR LastSparkXValue = MAXX( FILTER(SparklineTable, financials[Date] = XMaxDate), [X])
+                        
+                        // Add to SVG, and verify Data Category is set to Image URL for this measure
+                        VAR SVGImageURL = 
+                            "data:image/svg+xml;utf8," & 
+                            --- gradient---
+                            "<svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='-7 -7 164 64'>" & Defs & 
+                             "<polyline fill='url(#grad)' fill-opacity='0.3' stroke='transparent' 
+                              stroke-width='0' points=' 0 50 " & Lines & 
+                              " 150 150 Z '/>" &
+                            --- Lines---
+                            "<polyline 
+                                fill='transparent' stroke='" & LineColour & "' 
+                                stroke-linecap='round' stroke-linejoin='round' 
+                                stroke-width='3' points=' " & Lines & 
+                              " '/>" &
+                            --- Last Point---
+                                "<circle cx='"& LastSparkXValue & "' cy='" & 50 - LastSparkYValue & "' r='4' stroke='" & LineColour & "' stroke-width='3' fill='"                         & PointColour & "' />" &
+                                "</svg>"
+                        RETURN SVGImageURL
+
+Note: Use SalesRevenue for Sales Sparkline, Profits for Profit Sparkline and Profit Marnig for Profit margin Sparkline instead of *SUM Gross Sales*.
+
+
 
 
 
