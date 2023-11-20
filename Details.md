@@ -30,7 +30,7 @@ Today’s challenge I’ll display a few key metrics from the inbuilt sample dat
 
 **Fetch Data in power BI as excel format**
 
-To get raw data in power BI, Goto Home >> Click on >> Excel WorkBook >> Browse file from location [financials] >> Click on file check box at Navigator window >> Click on load.
+To get raw data in power BI, Goto Home >> Click on Excel WorkBook >> Browse file from location [financials] >> Click on file check box at Navigator window >> Click on load.
 
 ![Screenshot 2023-11-20 081554](https://github.com/Pushpendra5326/Power-BI/assets/145826060/01789ca9-9889-4793-8fd0-5e8844e45c08)
 
@@ -47,5 +47,34 @@ To create measure: Right click on any of column name at power bi desktop and sel
 ![image](https://github.com/Pushpendra5326/Power-BI/assets/145826060/0294b54b-4fe2-4aac-95c7-bd8e7e3e797d)
  
 I have created total 6 measures using DAX query.
+
+**1. Profits**
+
+                        Profits = SUM(financials[Profit])
+
+**2. Profit last Month**
+
+                        Profit last month = 
+                                                CALCULATE(
+                                                             [Profits],
+                                                             PARALLELPERIOD(
+                                                            financials[Date],
+                                                                                -1,
+                                                                                MONTH)
+                                                            )
+
+**3. SalesRevenue**
+
+                        SalesRevenue = SUM(financials[ Sales])
+
+**4. Profit MoM Var**
+
+                        Profit MoM Var = [Profits]-[Profit last month]
+
+**5. Profit Mom % Var**
+
+                        Profit MoM % Var = DIVIDE([Profit MoM Var], [Profit last month], 0)
+
+
 
 
