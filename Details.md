@@ -84,10 +84,11 @@ I have created total 6 measures using DAX query.
 
                         Profit Margin = DIVIDE(sum([Profit]), SUM(financials[ Sales]),0)
 
-
+. . .
 
 
 **SVG sparklines**
+
 To used SVG Image Sparkline in the card, Search on Google "https://kerrykolosko.com/" and click on templets, choose SVG templets.
 
 
@@ -146,6 +147,17 @@ Now goto open "Gradient Area Sparkline with last point" and copy "To use in a si
                         RETURN SVGImageURL
 
 Note: Use SalesRevenue for Sales Sparkline, Profits for Profit Sparkline and Profit Marnig for Profit margin Sparkline instead of *SUM Gross Sales*.
+
+**Create Visuals**
+
+Create all visuals to which meet the minimum standards of having font style "Segoe UI / Segoe UI Light", Font size "12" and Code for colour "#4D6678" that the tab order in your report makes sense.
+
+
+**Publish to Power BI Service**
+
+To publish the report on Power BI service, Click on Publish and fill the credentials and publish.
+
+***Thank you!!***
 
 
 
