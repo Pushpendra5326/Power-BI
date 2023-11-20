@@ -80,8 +80,11 @@ I have created total 6 measures using DAX query.
                         Profit MoM % Var = DIVIDE([Profit MoM Var], [Profit last month], 0)
 
 
-**Profit Margin**
+**6. Profit Margin**
+
                         Profit Margin = DIVIDE(sum([Profit]), SUM(financials[ Sales]),0)
+
+
 
 
 **SVG sparklines**
