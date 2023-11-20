@@ -157,6 +157,8 @@ Create all visuals to which meet the minimum standards of having font style "Seg
 
 To publish the report on Power BI service, Click on Publish and fill the credentials and publish.
 
+
+
 ***Thank you!!***
 
 
