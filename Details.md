@@ -91,6 +91,7 @@ I have created total 6 measures using DAX query.
 
 To used SVG Image Sparkline in the card, Search on Google "https://kerrykolosko.com/" and click on templets, choose SVG templets.
 
+![image](https://github.com/Pushpendra5326/Power-BI/assets/145826060/c3a9b24a-8a3f-429f-8375-27c9e48488f9)
 
 
 Now goto open "Gradient Area Sparkline with last point" and copy "To use in a singular visual" Code, and create the measure as per requirements as below:
@@ -150,13 +151,14 @@ Note: Use SalesRevenue for Sales Sparkline, Profits for Profit Sparkline and Pro
 
 **Create Visuals**
 
-Create all visuals to which meet the minimum standards of having font style "Segoe UI / Segoe UI Light", Font size "12" and Code for colour "#4D6678" that the tab order in your report makes sense.
+Create all visuals to which meet the minimum standards of having font style **"Segoe UI / Segoe UI Light"**, Font size **"12"** and Code for colour **"#4D6678"** that the tab order in your report makes sense.
 
 
 **Publish to Power BI Service**
 
 To publish the report on Power BI service, Click on Publish and fill the credentials and publish.
 
+![image](https://github.com/Pushpendra5326/Power-BI/assets/145826060/2d1ed2ad-36f7-4115-8d71-8375df039483)
 
 
 ***Thank you!!***
